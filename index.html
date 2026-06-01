@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a1714" />
+
+  <!-- SEO -->
+  <title>Atelier Noir — Luxury Interior Design Studio | Bespoke Interiors</title>
+  <meta name="description" content="Atelier Noir is an award-winning luxury interior design studio crafting bespoke residential, villa, and commercial spaces. Book a free 30-minute design strategy session." />
+  <meta name="keywords" content="luxury interior design, interior designers, villa interiors, modular kitchens, turnkey interior projects, premium home design, commercial interiors" />
+  <meta name="author" content="Atelier Noir Interior Design Studio" />
+  <link rel="canonical" href="https://ateliernoir.example.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Atelier Noir — Luxury Interior Design Studio" />
+  <meta property="og:description" content="Luxury interiors crafted for modern living. Book your free design consultation today." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80" />
+  <meta property="og:url" content="https://ateliernoir.example.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "InteriorDesignService",
+    "name": "Atelier Noir",
+    "description": "Award-winning luxury interior design studio.",
+    "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80",
+    "telephone": "+91-98765-43210",
+    "email": "studio@ateliernoir.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "14 Madhapur Heights, Jubilee Hills",
+      "addressLocality": "Hyderabad",
+      "addressRegion": "Telangana",
+      "postalCode": "500033",
+      "addressCountry": "IN"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "240"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <div class="loader__brand">
+        <span class="loader__letters">ATELIER&nbsp;NOIR</span>
+      </div>
+      <div class="loader__count"><span id="loaderCount">0</span><i>%</i></div>
+      <div class="loader__bar"><span id="loaderBar"></span></div>
+    </div>
+  </div>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follow" id="cursorFollow"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__logo" data-magnetic>
+      <span>Atelier</span><em>Noir</em>
+    </a>
+    <nav class="nav__links">
+      <a href="#about" data-magnetic>Studio</a>
+      <a href="#services" data-magnetic>Services</a>
+      <a href="#work" data-magnetic>Work</a>
+      <a href="#process" data-magnetic>Process</a>
+      <a href="#contact" data-magnetic>Contact</a>
+    </nav>
+    <a href="#lead" class="nav__cta btn-magnetic" data-magnetic>
+      <span>Book Consultation</span>
+    </a>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav>
+      <a href="#about">Studio</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="#lead" class="mobile-menu__cta">Book Consultation</a>
+    </nav>
+  </div>
+
+  <main id="smooth-content">
+
+    <!-- ===== 1. HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__media">
+        <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80">
+          <source src="https://videos.pexels.com/video-files/7578552/7578552-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content">
+        <p class="hero__eyebrow reveal-up">Luxury Interior Design Studio</p>
+        <h1 class="hero__title">
+          <span class="line"><span>Designing Spaces</span></span>
+          <span class="line"><span>That Reflect <em>Success</em></span></span>
+        </h1>
+        <p class="hero__sub reveal-up">Luxury interiors crafted for modern living.</p>
+        <div class="hero__actions reveal-up">
+          <a href="#lead" class="btn btn--gold btn-magnetic" data-magnetic><span>Book Free Design Consultation</span></a>
+          <a href="#work" class="btn btn--ghost" data-magnetic><span>View Our Work</span></a>
+        </div>
+      </div>
+      <div class="hero__scroll">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+      <div class="hero__marquee">
+        <div class="marquee-track">
+          <span>Bespoke Interiors</span><i>✦</i><span>Award Winning</span><i>✦</i><span>Turnkey Solutions</span><i>✦</i><span>Crafted for Success</span><i>✦</i>
+          <span>Bespoke Interiors</span><i>✦</i><span>Award Winning</span><i>✦</i><span>Turnkey Solutions</span><i>✦</i><span>Crafted for Success</span><i>✦</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. TRUSTED NUMBERS ===== -->
+    <section class="stats" id="stats">
+      <div class="stats__grid">
+        <div class="stat" data-reveal>
+          <div class="stat__num"><span class="counter" data-target="480">0</span><i>+</i></div>
+          <p class="stat__label">Projects Completed</p>
+        </div>
+        <div class="stat" data-reveal>
+          <div class="stat__num"><span class="counter" data-target="18">0</span><i>+</i></div>
+          <p class="stat__label">Years Experience</p>
+        </div>
+        <div class="stat" data-reveal>
+          <div class="stat__num"><span class="counter" data-target="99">0</span><i>%</i></div>
+          <p class="stat__label">Client Satisfaction</p>
+        </div>
+        <div class="stat" data-reveal>
+          <div class="stat__num"><span class="counter" data-target="32">0</span><i>+</i></div>
+          <p class="stat__label">Design Awards</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. ABOUT STUDIO ===== -->
+    <section class="about" id="about">
+      <div class="about__head">
+        <p class="section-eyebrow" data-reveal>The Studio</p>
+        <h2 class="section-title split-text">Where architecture meets emotion, and every detail tells a story of refined living.</h2>
+      </div>
+      <div class="about__body">
+        <div class="about__imgs">
+          <div class="about__img about__img--1" data-parallax data-speed="-40">
+            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=900&q=80" alt="Luxury living room interior design" loading="lazy" />
+          </div>
+          <div class="about__img about__img--2" data-parallax data-speed="60">
+            <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=700&q=80" alt="Elegant bedroom interior" loading="lazy" />
+          </div>
+        </div>
+        <div class="about__text">
+          <p class="about__lead" data-reveal>We are a collective of architects, designers and craftspeople devoted to creating interiors that feel as extraordinary as they look.</p>
+          <p data-reveal>For over eighteen years, Atelier Noir has transformed homes, villas and workplaces into living expressions of identity. We believe luxury is not about excess — it is about intention. Every material, every line of light, every silence between objects is considered.</p>
+          <p data-reveal>From the first sketch to the final styling, our turnkey approach means you experience the journey without the chaos — only the joy of watching your vision become real.</p>
+          <a href="#work" class="link-underline" data-magnetic>Explore our philosophy →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. SERVICES ===== -->
+    <section class="services" id="services">
+      <div class="services__head">
+        <p class="section-eyebrow" data-reveal>What We Do</p>
+        <h2 class="section-title split-text">Comprehensive design services for the way you live and work.</h2>
+      </div>
+      <div class="services__list">
+        <div class="service" data-reveal>
+          <span class="service__index">01</span>
+          <h3 class="service__title">Residential Interiors</h3>
+          <p class="service__desc">Tailored homes that balance comfort, character and timeless sophistication.</p>
+          <span class="service__arrow">→</span>
+          <div class="service__hover-img"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="Residential interior" loading="lazy" /></div>
+        </div>
+        <div class="service" data-reveal>
+          <span class="service__index">02</span>
+          <h3 class="service__title">Luxury Villas</h3>
+          <p class="service__desc">Grand, immersive environments designed for elevated everyday living.</p>
+          <span class="service__arrow">→</span>
+          <div class="service__hover-img"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Luxury villa interior" loading="lazy" /></div>
+        </div>
+        <div class="service" data-reveal>
+          <span class="service__index">03</span>
+          <h3 class="service__title">Apartments</h3>
+          <p class="service__desc">Smart, refined spaces that maximise every square foot beautifully.</p>
+          <span class="service__arrow">→</span>
+          <div class="service__hover-img"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80" alt="Apartment interior" loading="lazy" /></div>
+        </div>
+        <div class="service" data-reveal>
+          <span class="service__index">04</span>
+          <h3 class="service__title">Commercial Spaces</h3>
+          <p class="service__desc">Workplaces and hospitality interiors that command presence.</p>
+          <span class="service__arrow">→</span>
+          <div class="service__hover-img"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&q=80" alt="Commercial interior" loading="lazy" /></div>
+        </div>
+        <div class="service" data-reveal>
+          <span class="service__index">05</span>
+          <h3 class="service__title">Modular Kitchens</h3>
+          <p class="service__desc">Engineered elegance where culinary function meets sculptural form.</p>
+          <span class="service__arrow">→</span>
+          <div class="service__hover-img"><img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=600&q=80" alt="Modular kitchen" loading="lazy" /></div>
+        </div>
+        <div class="service" data-reveal>
+          <span class="service__index">06</span>
+          <h3 class="service__title">Turnkey Projects</h3>
+          <p class="service__desc">End-to-end delivery — concept, build and styling, seamlessly managed.</p>
+          <span class="service__arrow">→</span>
+          <div class="service__hover-img"><img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=600&q=80" alt="Turnkey project interior" loading="lazy" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. FEATURED PROJECTS ===== -->
+    <section class="work" id="work">
+      <div class="work__head">
+        <p class="section-eyebrow" data-reveal>Featured Work</p>
+        <h2 class="section-title split-text">A portfolio of spaces that redefine luxury.</h2>
+      </div>
+      <div class="work__grid">
+        <article class="project project--tall" data-reveal data-magnetic>
+          <div class="project__img"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=80" alt="The Monochrome Penthouse" loading="lazy" /></div>
+          <div class="project__meta">
+            <span class="project__cat">Penthouse · Residential</span>
+            <h3 class="project__title">The Monochrome Penthouse</h3>
+            <span class="project__year">2024 · Hyderabad</span>
+          </div>
+        </article>
+        <article class="project" data-reveal data-magnetic>
+          <div class="project__img"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80" alt="Villa Aurelia" loading="lazy" /></div>
+          <div class="project__meta">
+            <span class="project__cat">Villa · Turnkey</span>
+            <h3 class="project__title">Villa Aurelia</h3>
+            <span class="project__year">2024 · Goa</span>
+          </div>
+        </article>
+        <article class="project" data-reveal data-magnetic>
+          <div class="project__img"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=900&q=80" alt="The Ivory Residence" loading="lazy" /></div>
+          <div class="project__meta">
+            <span class="project__cat">Apartment · Residential</span>
+            <h3 class="project__title">The Ivory Residence</h3>
+            <span class="project__year">2023 · Mumbai</span>
+          </div>
+        </article>
+        <article class="project project--tall" data-reveal data-magnetic>
+          <div class="project__img"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80" alt="Atrium House" loading="lazy" /></div>
+          <div class="project__meta">
+            <span class="project__cat">Bungalow · Architecture</span>
+            <h3 class="project__title">Atrium House</h3>
+            <span class="project__year">2023 · Bengaluru</span>
+          </div>
+        </article>
+        <article class="project" data-reveal data-magnetic>
+          <div class="project__img"><img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=900&q=80" alt="Noir Lounge" loading="lazy" /></div>
+          <div class="project__meta">
+            <span class="project__cat">Hospitality · Commercial</span>
+            <h3 class="project__title">Noir Lounge</h3>
+            <span class="project__year">2022 · Delhi</span>
+          </div>
+        </article>
+        <article class="project" data-reveal data-magnetic>
+          <div class="project__img"><img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=900&q=80" alt="The Warm Minimal" loading="lazy" /></div>
+          <div class="project__meta">
+            <span class="project__cat">Apartment · Modular</span>
+            <h3 class="project__title">The Warm Minimal</h3>
+            <span class="project__year">2022 · Pune</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Before / After Slider -->
+      <div class="ba" data-reveal>
+        <div class="ba__head">
+          <p class="section-eyebrow">The Transformation</p>
+          <h3 class="ba__title">From blank canvas to breathtaking.</h3>
+        </div>
+        <div class="ba__slider" id="baSlider">
+          <div class="ba__img ba__img--after"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&q=80" alt="After interior design" loading="lazy" /><span class="ba__tag ba__tag--after">After</span></div>
+          <div class="ba__img ba__img--before" id="baBefore"><img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=1200&q=80" alt="Before interior design" loading="lazy" /><span class="ba__tag ba__tag--before">Before</span></div>
+          <div class="ba__handle" id="baHandle"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. LEAD GENERATION ===== -->
+    <section class="lead" id="lead">
+      <div class="lead__inner">
+        <div class="lead__left">
+          <p class="section-eyebrow" data-reveal>Free Strategy Session</p>
+          <h2 class="lead__title split-text">Get a Free 30-Minute Design Strategy Session</h2>
+          <p class="lead__sub" data-reveal>Discover how to maximize your space, estimate your project budget, and receive expert recommendations before making any commitment.</p>
+          <ul class="lead__benefits">
+            <li data-reveal><span class="tick">✓</span> Free consultation with a design expert</li>
+            <li data-reveal><span class="tick">✓</span> Preliminary budget guidance</li>
+            <li data-reveal><span class="tick">✓</span> Space planning recommendations</li>
+            <li data-reveal><span class="tick">✓</span> No obligation quotation</li>
+          </ul>
+        </div>
+
+        <div class="lead__right" data-reveal>
+          <form class="lead__form" id="leadForm" novalidate>
+            <h3 class="lead__form-title">Claim Your Session</h3>
+            <div class="field">
+              <input type="text" id="name" name="name" required placeholder=" " />
+              <label for="name">Full Name</label>
+            </div>
+            <div class="field">
+              <input type="tel" id="phone" name="phone" required placeholder=" " />
+              <label for="phone">Phone Number</label>
+            </div>
+            <div class="field">
+              <input type="email" id="email" name="email" required placeholder=" " />
+              <label for="email">Email Address</label>
+            </div>
+            <button type="submit" class="btn btn--gold btn--full btn-magnetic" data-magnetic><span>Claim My Free Consultation</span></button>
+            <p class="lead__note">Limited consultation slots available each week.</p>
+          </form>
+
+          <div class="lead__success" id="leadSuccess">
+            <div class="lead__success-icon">
+              <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="none"/><path fill="none" d="M14 27l8 8 16-16"/></svg>
+            </div>
+            <h3>Thank you.</h3>
+            <p>Our design team will contact you within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 7. TESTIMONIALS ===== -->
+    <section class="testimonials" id="testimonials">
+      <div class="testimonials__head">
+        <p class="section-eyebrow" data-reveal>Client Stories</p>
+        <h2 class="section-title split-text">Trusted by those who expect nothing less than exceptional.</h2>
+      </div>
+      <div class="testimonials__row">
+        <article class="testimonial" data-reveal data-magnetic>
+          <div class="testimonial__video">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80" alt="Client" loading="lazy" />
+            <button class="testimonial__play" aria-label="Play"><span></span></button>
+          </div>
+          <blockquote>“They understood our family better than we understood ourselves. The home feels like us — only more beautiful.”</blockquote>
+          <footer><strong>Aarav &amp; Meera Kapoor</strong><span>Villa Aurelia, Goa</span></footer>
+        </article>
+        <article class="testimonial" data-reveal data-magnetic>
+          <div class="testimonial__video">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80" alt="Client" loading="lazy" />
+            <button class="testimonial__play" aria-label="Play"><span></span></button>
+          </div>
+          <blockquote>“Every rupee was visible in the detailing. The most seamless turnkey experience we could have imagined.”</blockquote>
+          <footer><strong>Rohan Mehta</strong><span>The Monochrome Penthouse</span></footer>
+        </article>
+        <article class="testimonial" data-reveal data-magnetic>
+          <div class="testimonial__video">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&q=80" alt="Client" loading="lazy" />
+            <button class="testimonial__play" aria-label="Play"><span></span></button>
+          </div>
+          <blockquote>“From concept to handover, total calm. We just watched our dream take shape, beautifully managed.”</blockquote>
+          <footer><strong>Sana Reddy</strong><span>The Ivory Residence, Mumbai</span></footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== 8. PROCESS TIMELINE ===== -->
+    <section class="process" id="process">
+      <div class="process__head">
+        <p class="section-eyebrow" data-reveal>How We Work</p>
+        <h2 class="section-title split-text">A refined journey, from first conversation to final reveal.</h2>
+      </div>
+      <div class="process__timeline">
+        <div class="process__line"><span id="processProgress"></span></div>
+        <div class="process__step" data-reveal>
+          <span class="process__num">01</span>
+          <h3>Consultation</h3>
+          <p>We listen, understand your lifestyle, and align on vision, scope and budget.</p>
+        </div>
+        <div class="process__step" data-reveal>
+          <span class="process__num">02</span>
+          <h3>Concept</h3>
+          <p>Mood boards, spatial layouts and material palettes bring the idea to life.</p>
+        </div>
+        <div class="process__step" data-reveal>
+          <span class="process__num">03</span>
+          <h3>Design</h3>
+          <p>Detailed 3D visualisation and technical drawings refine every element.</p>
+        </div>
+        <div class="process__step" data-reveal>
+          <span class="process__num">04</span>
+          <h3>Execution</h3>
+          <p>Master craftsmen and project managers deliver with precision on time.</p>
+        </div>
+        <div class="process__step" data-reveal>
+          <span class="process__num">05</span>
+          <h3>Handover</h3>
+          <p>Styled, photographed and perfected — we hand you the keys to a masterpiece.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 9. FAQ ===== -->
+    <section class="faq" id="faq">
+      <div class="faq__head">
+        <p class="section-eyebrow" data-reveal>Questions</p>
+        <h2 class="section-title split-text">Everything you'd like to know.</h2>
+      </div>
+      <div class="faq__list">
+        <div class="faq__item" data-reveal>
+          <button class="faq__q">What is the typical budget for a luxury interior project?<span class="faq__icon"></span></button>
+          <div class="faq__a"><p>Every project is bespoke. During your free strategy session we provide preliminary budget guidance based on your scope, square footage and material preferences, so you can plan with confidence.</p></div>
+        </div>
+        <div class="faq__item" data-reveal>
+          <button class="faq__q">How long does a full interior project take?<span class="faq__icon"></span></button>
+          <div class="faq__a"><p>Timelines vary by scale. A premium apartment typically takes 10–14 weeks, while turnkey villas may span 4–7 months. We share a detailed schedule before execution begins.</p></div>
+        </div>
+        <div class="faq__item" data-reveal>
+          <button class="faq__q">Do you handle turnkey execution or only design?<span class="faq__icon"></span></button>
+          <div class="faq__a"><p>Both. You can engage us for design consultancy alone, or for a complete turnkey delivery where we manage everything from concept to final styling.</p></div>
+        </div>
+        <div class="faq__item" data-reveal>
+          <button class="faq__q">Will I be involved throughout the process?<span class="faq__icon"></span></button>
+          <div class="faq__a"><p>Absolutely. You'll have a dedicated design lead, scheduled reviews, and access to 3D visualisations at every key milestone — full transparency, zero surprises.</p></div>
+        </div>
+        <div class="faq__item" data-reveal>
+          <button class="faq__q">Is the consultation really free?<span class="faq__icon"></span></button>
+          <div class="faq__a"><p>Yes. The 30-minute strategy session is completely complimentary and carries no obligation. It's simply how we get to know each other.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 10. CONTACT ===== -->
+    <section class="contact" id="contact">
+      <div class="contact__inner">
+        <div class="contact__info">
+          <p class="section-eyebrow" data-reveal>Get in Touch</p>
+          <h2 class="contact__title split-text">Let's design something extraordinary together.</h2>
+          <ul class="contact__details">
+            <li data-reveal><span>Phone</span><a href="tel:+919876543210" data-magnetic>+91 98765 43210</a></li>
+            <li data-reveal><span>Email</span><a href="mailto:studio@ateliernoir.com" data-magnetic>studio@ateliernoir.com</a></li>
+            <li data-reveal><span>Studio</span><address>14 Madhapur Heights, Jubilee Hills,<br/>Hyderabad, Telangana 500033</address></li>
+          </ul>
+          <a href="#lead" class="btn btn--gold btn-magnetic" data-magnetic><span>Book Free Consultation</span></a>
+        </div>
+        <div class="contact__map" data-reveal>
+          <iframe
+            src="https://www.google.com/maps?q=Jubilee+Hills+Hyderabad&output=embed"
+            loading="lazy" title="Studio location" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== 11. FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <h2>Atelier<em>Noir</em></h2>
+        <p>Luxury interiors crafted for modern living. Designing spaces that reflect success.</p>
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h4>Explore</h4>
+          <a href="#about">Studio</a>
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#process">Process</a>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <a href="#services">Residential</a>
+          <a href="#services">Luxury Villas</a>
+          <a href="#services">Modular Kitchens</a>
+          <a href="#services">Turnkey</a>
+        </div>
+        <div class="footer__col">
+          <h4>Social</h4>
+          <a href="#" data-magnetic>Instagram</a>
+          <a href="#" data-magnetic>Pinterest</a>
+          <a href="#" data-magnetic>LinkedIn</a>
+          <a href="#" data-magnetic>Behance</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__marquee">
+      <div class="marquee-track marquee-track--big">
+        <span>Let's create something timeless</span><i>✦</i><span>Let's create something timeless</span><i>✦</i><span>Let's create something timeless</span><i>✦</i>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> Atelier Noir Interior Design Studio. All rights reserved.</p>
+      <p>Crafted with intention.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
