@@ -156,28 +156,50 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* =======================================================
-     SPLIT TEXT (per-char reveal)
+     SPLIT TEXT — word-level reveal (spaces preserved)
+     Each word is wrapped in <span class="word"> so real
+     whitespace text-nodes sit between spans — no space
+     collapse, no invisible-span tricks.
      ======================================================= */
   function initSplitText() {
     gsap.utils.toArray(".split-text").forEach((el) => {
-      const text = el.textContent;
+      const text = el.textContent.trim();
       el.innerHTML = "";
-      const frag = document.createDocumentFragment();
-      [...text].forEach((ch) => {
-        const span = document.createElement("span");
-        span.className = "char";
-        span.textContent = ch === " " ? "\u00A0" : ch;
-        frag.appendChild(span);
-      });
-      el.appendChild(frag);
 
-      gsap.set(el.querySelectorAll(".char"), { yPercent: 110, opacity: 0 });
-      gsap.to(el.querySelectorAll(".char"), {
-        yPercent: 0, opacity: 1, duration: 0.8, ease: "power3.out", stagger: 0.012,
-        scrollTrigger: { trigger: el, start: "top 85%" }
+      // Split into words; place real text-node spaces between word-spans
+      const words = text.split(" ");
+      words.forEach((word, i) => {
+        const span = document.createElement("span");
+        span.className = "word";
+        // overflow:hidden clips the slide-up without hiding neighbours
+        span.style.cssText = "display:inline-block;overflow:hidden;vertical-align:bottom;";
+
+        const inner = document.createElement("span");
+        inner.className = "word__inner";
+        inner.style.cssText = "display:inline-block;";
+        inner.textContent = word;
+        span.appendChild(inner);
+        el.appendChild(span);
+
+        // Real whitespace text-node — browsers render this correctly
+        if (i < words.length - 1) {
+          el.appendChild(document.createTextNode(" "));
+        }
+      });
+
+      const inners = el.querySelectorAll(".word__inner");
+      gsap.set(inners, { yPercent: 110, opacity: 0 });
+      gsap.to(inners, {
+        yPercent: 0,
+        opacity:  1,
+        duration: 0.75,
+        ease:     "power3.out",
+        stagger:  0.045,
+        scrollTrigger: { trigger: el, start: "top 88%" }
       });
     });
   }
+
 
   /* =======================================================
      COUNTERS
